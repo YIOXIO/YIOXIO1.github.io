@@ -26,9 +26,17 @@
         font-size:14px;
         font-weight:300;
         text-align:center}
-.advantages__descr a{
-    color:red;
-    text-decoration:underline
-    }
+        a{
+            color:red;
+            text-decoration:underline
+        }
+        &__icon{
+            &_animated{
+                animation: heartbeat 1.5s ease infinite;
+                &:hover{
+                    animation-play-state: paused;
+                }
+            }
+        }
 
 }

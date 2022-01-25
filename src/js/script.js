@@ -75,21 +75,27 @@ $(document).ready(function(){
 
   $('form').submit(function(e){
     e.preventDefault();
-
-    if (!$(this).valid()){
-      return;
-    }
-
     $.ajax({
-      type: "post",
+      type: "POST",
       url: "mailer/smart.php",
       data: $(this).serialize()
-    }).done(function(){
+    }).done(function() {
       $(this).find("input").val("");
       $('#consultation, #order').fadeOut();
-      $('.overlay, #thanks').fadeIn(slow);
+      $('.overlay, #thanks').fadeIn('slow');
+
       $('form').trigger('reset');
     });
     return false;
+  });
+
+  //smooth scroll and pageup
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 1600){
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
   });
 });
