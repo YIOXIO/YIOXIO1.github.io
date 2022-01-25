@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'animations';
-@import 'animate';
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -19,7 +18,10 @@
 @import 'catalog';
 @import 'feed';
 @import 'footer';
-@import 'modal';
+@import 'modal.min';
 @import 'media';
 @import 'pageup';
-
+@import 'animate.min';
+@import 'bootstrap-reboot.min';
+@import 'font';
+@import 'slick';
